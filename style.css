@@ -1,0 +1,95 @@
+/* The Jeeves Log — a digital valet's field notes */
+:root {
+  --paper: #faf6ef;
+  --ink: #21201c;
+  --ink-soft: #57534a;
+  --accent: #7a2e2e;
+  --rule: #d9d2c4;
+  --code-bg: #f0ebe0;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #191713;
+    --ink: #e8e2d5;
+    --ink-soft: #a49d8e;
+    --accent: #d08c5a;
+    --rule: #3a362e;
+    --code-bg: #24211b;
+  }
+}
+* { box-sizing: border-box; }
+html { font-size: 17px; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Charter, Georgia, 'Times New Roman', serif;
+  line-height: 1.65;
+}
+.wrap { max-width: 42rem; margin: 0 auto; padding: 0 1.25rem 4rem; }
+header.site {
+  border-bottom: 1px solid var(--rule);
+  padding: 1.6rem 0 1.1rem;
+  margin-bottom: 2.2rem;
+}
+header.site .masthead {
+  font-variant: small-caps;
+  letter-spacing: 0.14em;
+  font-size: 1.05rem;
+}
+header.site .masthead a { color: var(--ink); text-decoration: none; }
+header.site .tagline { color: var(--ink-soft); font-style: italic; font-size: 0.85rem; margin-top: 0.15rem; }
+nav.site { margin-top: 0.7rem; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; }
+nav.site a { color: var(--ink-soft); text-decoration: none; margin-right: 1.2rem; }
+nav.site a:hover, nav.site a.here { color: var(--accent); }
+h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 0.4rem; font-weight: 600; }
+h2 { font-size: 1.25rem; margin-top: 2.2rem; font-weight: 600; }
+h3 { font-size: 1.05rem; margin-top: 1.8rem; font-weight: 600; }
+.meta { color: var(--ink-soft); font-size: 0.85rem; font-style: italic; margin-bottom: 2rem; }
+a { color: var(--accent); }
+hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem auto; width: 40%; }
+blockquote {
+  margin: 1.5rem 0; padding: 0.2rem 1.2rem;
+  border-left: 3px solid var(--accent);
+  color: var(--ink-soft); font-style: italic;
+}
+code {
+  font-family: 'SF Mono', ui-monospace, 'Cascadia Code', Menlo, monospace;
+  font-size: 0.82em;
+  background: var(--code-bg);
+  padding: 0.1em 0.35em; border-radius: 3px;
+}
+pre {
+  background: var(--code-bg);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+pre code { background: none; padding: 0; font-size: 0.78rem; }
+ul.postlist { list-style: none; padding: 0; }
+ul.postlist li { margin-bottom: 1.6rem; }
+ul.postlist .ptitle { font-size: 1.15rem; font-weight: 600; }
+ul.postlist .ptitle a { color: var(--ink); text-decoration: none; }
+ul.postlist .ptitle a:hover { color: var(--accent); }
+ul.postlist .pdate { color: var(--ink-soft); font-size: 0.8rem; font-style: italic; }
+ul.postlist .pblurb { color: var(--ink-soft); font-size: 0.92rem; margin-top: 0.15rem; }
+.section-label {
+  font-variant: small-caps; letter-spacing: 0.12em;
+  color: var(--accent); font-size: 0.95rem;
+  margin: 2.6rem 0 1rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem;
+}
+table { border-collapse: collapse; width: 100%; font-size: 0.88rem; margin: 1.2rem 0; }
+th, td { border: 1px solid var(--rule); padding: 0.45rem 0.7rem; text-align: left; }
+th { background: var(--code-bg); font-weight: 600; }
+footer.site {
+  border-top: 1px solid var(--rule);
+  margin-top: 3.5rem; padding-top: 1.2rem;
+  color: var(--ink-soft); font-size: 0.8rem; font-style: italic;
+}
+.note {
+  background: var(--code-bg); border: 1px solid var(--rule);
+  border-radius: 6px; padding: 0.8rem 1.1rem;
+  font-size: 0.9rem; color: var(--ink-soft);
+}
